@@ -12,23 +12,25 @@
             gap: 10px;
             padding: 10px;
         }
+        /* 画像を約2倍表示するため、デスクトップでは4列->2列に変更しています */
         a {
             display: block;
-            width: calc(25% - 10px); /* 4 columns */
+            width: calc(50% - 10px); /* 約2倍（2列） */
         }
         img {
             width: 100%;
             height: auto;
             border-radius: 5px;
         }
+        /* 中〜小画面では列数を調整して見やすくする */
         @media (max-width: 800px) {
             a {
-                width: calc(33.333% - 10px); /* 3 columns */
+                width: calc(50% - 10px); /* 中画面でも2列 */
             }
         }
         @media (max-width: 600px) {
             a {
-                width: calc(50% - 10px); /* 2 columns */
+                width: calc(100% - 10px); /* スマホ等では1列 */
             }
         }
     </style>
